@@ -10,4 +10,8 @@ function computerPicks () {
         return "scissors";
     }
 }
-console.log(computerPicks());
+function playerPicks () {
+    var i = prompt("Rock, Paper, or Scissors?:");
+    return i.toLowerCase();
+}
+console.log(computerPicks(), playerPicks())
