@@ -21,28 +21,28 @@ function PlayAround (computerPlay, playerPicks) {
     var computerPicks = computerPlay ()  
     var playerPicks = playa()
     if (playerPicks === computerPicks) {
-        console.log("It's a tie!")
+        alert("It's a tie!");
         }
-        else if  (playerPicks == ("rock")) {
-        if (computerPicks == ("paper")) {
-        console.log ("You lose!")
+        else if  (playerPicks === "rock") {
+        if (computerPicks === "paper") {
+        alert("You lose!");
         }
-        else if (computerPicks == ("scissors")) {
-            alert("You win!")
+        else if (computerPicks === "scissors") {
+            alert("You win!");
         } }
-        else if  (playerPicks == ("paper")) {
-        if (computerPicks == ("scissors")) {
-            alert("You lose!")
+        else if  (playerPicks === "paper") {
+        if (computerPicks === "scissors") {
+            alert("You lose!");
         }
-        else if (computerPicks == ("rock")) {
-            alert("You win!")
+        else if (computerPicks === "rock") {
+            alert("You win!");
         } }
-        else if  (playerPicks == ("scissors")) { 
-        if (computerPicks == ("paper")) {
-            alert("You Win!")
+        else if  (playerPicks === "scissors") { 
+        if (computerPicks === "paper") {
+            alert("You Win!");
     }
-        else if (computerPicks == ("rock")) {
-            alert("You lose!")
+        else if (computerPicks === "rock") {
+            alert("You lose!");
         }      
 } }
 
