@@ -19,35 +19,35 @@ function playa() {
 function PlayAround(computerPlay, playa) {
         if (playerPicks === "rock") {
             if (computerPicks === "paper") {
-                return("You lose!");
+                return("Computer chose paper, you lose!");
             }
             else if (computerPicks === "scissors") {
-                return("You win!");
+                return("Computer chose scissors, you win!");
             }
             else {
-                return("It's a tie!");
+                return("Computer chose rock, it's a tie!");
             }
         }
         else if  (playerPicks === "paper") {
             if (computerPicks === "scissors") {
-                return("You lose!");
+                return("Computer chose scissors, you lose!");
             }
             else if (computerPicks === "rock") {
-                return("You win!");
+                return("Computer chose rock, you win!");
             }
             else {
-                return("It's a tie!");
+                return("Computer chose paper, it's a tie!");
             }
         }
         else if  (playerPicks === "scissors") { 
             if (computerPicks === "paper") {
-                return("You Win!");
+                return("Computer chose paper, you Win!");
         }
             else if (computerPicks === "rock") {
-                return("You lose!");
+                return("Computer chose rock, you lose!");
         }
             else {
-                return("It's a tie!");
+                return("Computer chose scissors, it's a tie!");
             }
         }
     
