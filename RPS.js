@@ -1,3 +1,20 @@
+let playerScore = 0
+let computerScore = 0
+
+function pick(number) {
+    playerSelection = number;
+}
+
+fuction playerPick() {
+    if (playerSelection === 1) {
+        return "rock";
+        }  if (playerSelection === 2) {
+            return "paper";
+        }  if (playerSelection === 3) {
+            return "scissors";
+        }
+}
+
 function computerPlay() {
     let compChoices = ["rock", "paper", "scissors"]
     let randomizeChoice = Math.floor(Math.random() * compChoices.length) + 1;
@@ -10,14 +27,13 @@ function computerPlay() {
         return "scissors";
     }
 }
-console.log("computer's choice: " + computerPlay());
-function playa() {
-    var i = prompt("Rock, Paper, or Scissors?:");
-    return i.toLowerCase();
-}
+function rock() {
+    alert("YAY! YOU DID IT!");
+  }
 
-function PlayAround(computerPlay, playa) {
-        if (playerPicks === "rock") {
+
+function PlayAround (computerPlay) {
+        if (button.value === "rock") {
             if (computerPicks === "paper") {
                 return("Computer chose paper, you lose!");
             }
@@ -28,7 +44,7 @@ function PlayAround(computerPlay, playa) {
                 return("Computer chose rock, it's a tie!");
             }
         }
-        else if  (playerPicks === "paper") {
+        else if  (button.value === "paper") {
             if (computerPicks === "scissors") {
                 return("Computer chose scissors, you lose!");
             }
@@ -39,7 +55,7 @@ function PlayAround(computerPlay, playa) {
                 return("Computer chose paper, it's a tie!");
             }
         }
-        else if  (playerPicks === "scissors") { 
+        else if  (button.value === "scissors") { 
             if (computerPicks === "paper") {
                 return("Computer chose paper, you Win!");
         }
@@ -53,7 +69,9 @@ function PlayAround(computerPlay, playa) {
     
 } 
 const computerPicks = computerPlay();  
-const playerPicks = playa();
-alert(PlayAround(computerPlay, playa));
-console.log(PlayAround(computerPlay, playa));
-
+alert(PlayAround(computerPlay));
+buttons.forEach(button =>{
+    button.addEventListener('click', function(){
+        PlayRound(button.value)
+    })
+})
