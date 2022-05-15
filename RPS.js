@@ -1,4 +1,4 @@
-function computerPlay () {
+function computerPlay() {
     let compChoices = ["rock", "paper", "scissors"]
     let randomizeChoice = Math.floor(Math.random() * compChoices.length) + 1;
 
@@ -10,41 +10,50 @@ function computerPlay () {
         return "scissors";
     }
 }
-
-function playa () {
+console.log("computer's choice: " + computerPlay());
+function playa() {
     var i = prompt("Rock, Paper, or Scissors?:");
     return i.toLowerCase();
 }
-console.log(computerPlay(), playa())
 
-function PlayAround (computerPlay, playerPicks) {
-    var computerPicks = computerPlay ()  
-    var playerPicks = playa()
-    if (playerPicks === computerPicks) {
-        alert("It's a tie!");
+function PlayAround(computerPlay, playa) {
+        if (playerPicks === "rock") {
+            if (computerPicks === "paper") {
+                return("You lose!");
+            }
+            else if (computerPicks === "scissors") {
+                return("You win!");
+            }
+            else {
+                return("It's a tie!");
+            }
         }
-        else if  (playerPicks === "rock") {
-        if (computerPicks === "paper") {
-        alert("You lose!");
-        }
-        else if (computerPicks === "scissors") {
-            alert("You win!");
-        } }
         else if  (playerPicks === "paper") {
-        if (computerPicks === "scissors") {
-            alert("You lose!");
+            if (computerPicks === "scissors") {
+                return("You lose!");
+            }
+            else if (computerPicks === "rock") {
+                return("You win!");
+            }
+            else {
+                return("It's a tie!");
+            }
         }
-        else if (computerPicks === "rock") {
-            alert("You win!");
-        } }
         else if  (playerPicks === "scissors") { 
-        if (computerPicks === "paper") {
-            alert("You Win!");
-    }
-        else if (computerPicks === "rock") {
-            alert("You lose!");
-        }      
-} }
-
+            if (computerPicks === "paper") {
+                return("You Win!");
+        }
+            else if (computerPicks === "rock") {
+                return("You lose!");
+        }
+            else {
+                return("It's a tie!");
+            }
+        }
     
+} 
+const computerPicks = computerPlay();  
+const playerPicks = playa();
+alert(PlayAround(computerPlay, playa));
+console.log(PlayAround(computerPlay, playa));
 
